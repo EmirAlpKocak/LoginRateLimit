@@ -56,7 +56,7 @@ After adding these to your login pages, the script should work correctly.
 
 ## Customizing Blocked Alert HTML Page
 
-The HTML page shown when the IP is blocked is stored inside the PHP file, at openBlockPage() function. You can customize the HTML code for your own warning message. I would be happy if you leave "This login page is protected by LoginRateLimit!" message. :)
+The HTML page shown when an IP is blocked is stored inside the PHP file, at openBlockPage() function. You can customize the HTML code for your own warning message. I would be happy if you leave "This login page is protected by LoginRateLimit!" message. :)
 
 ## Change Log
 
