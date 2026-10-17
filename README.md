@@ -58,6 +58,10 @@ After adding these to your login pages, the script should work correctly.
 
 The HTML page shown when an IP is blocked is stored inside the PHP file, at openBlockPage() function. You can customize the HTML code for your own warning message. I would be happy if you leave "This login page is protected by LoginRateLimit!" message. :)
 
+## For CloudFlare Users
+
+If your website uses CloudFlare or a similar service, you need to download the CloudFlare compatible version because since all IP addresses will come from CloudFlare servers, LoginRateLimit won't work properly and lock out your whole server.
+
 ## Change Log
 
 * 1.0.0 - Released at 19/10/2026:
