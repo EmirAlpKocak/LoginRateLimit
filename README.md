@@ -58,4 +58,4 @@ After adding these to your login pages, the script should work correctly.
 
 * 1.0.0 - Released at 19/10/2026:
 
-Initial release.
+  * Initial release.
