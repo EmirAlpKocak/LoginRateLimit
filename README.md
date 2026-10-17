@@ -53,3 +53,8 @@ After adding these to your login pages, the script should work correctly.
 * You can configure location of the directory for storing the temporary files by changing storage-folder option. I recommend you to keep this default if you don't have a reason to change it.
 
 * If you uploaded LoginRateLimit.php somewhere else, you need to change the path at require_once. If you uploaded into the same directory as your login pages, do not change it.
+
+## Change Log
+
+* 1.0.0 - Released at 19/10/2026:
+- Initial release.
