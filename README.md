@@ -11,6 +11,7 @@ You don't need programming knowledge to use this script. Just put it in the same
 ## Setup
 
 To setup LoginRateLimit, first download the latest version from [Releases page.](https://github.com/EmirAlpKocak/LoginRateLimit/releases)
+  * You can also get it from [Deuterium Software website.](https://deuteriumsoftware.com/software/loginratelimit/)
 
 After that, upload LoginRateLimit.php to your website. You can either put into the same directory as your login/admin page or on a directory that you choose.
 
