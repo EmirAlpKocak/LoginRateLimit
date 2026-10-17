@@ -67,7 +67,7 @@ If your website uses CloudFlare or a similar service, you need to download the C
 
 LoginRateLimit and this repository is licensed under **Apache-2.0 license**. See more information at LICENSE file.
 
-Please read the **SECURITY** file of this repository before using LoginRateLimit.
+Please read **SECURITY.md** file before using LoginRateLimit.
 
 ## Change Log
 
