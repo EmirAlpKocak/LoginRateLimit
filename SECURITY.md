@@ -4,7 +4,7 @@ LoginRateLimit is licensed under Apache-2.0 license.
 
 Coded By: Emir Alp Koçak
 
-Website: deuteriumsoftware.com
+Website: [deuteriumsoftware.com](https://deuteriumsoftware.com)
 
 ## !!! IMPORTANT
 
