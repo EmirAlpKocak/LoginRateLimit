@@ -54,6 +54,10 @@ After adding these to your login pages, the script should work correctly.
 
 * If you uploaded LoginRateLimit.php somewhere else, you need to change the path at require_once. If you uploaded into the same directory as your login pages, do not change it.
 
+## Customizing Blocked Alert HTML Page
+
+
+
 ## Change Log
 
 * 1.0.0 - Released at 19/10/2026:
