@@ -8,7 +8,7 @@ It is designed for beginners, small businesses and solo websites. It works on sh
 
 You don't need programming knowledge to use this script. Just put it in the same directory as your login page and add a few lines of code to your page and it will work.
 
-## Setup and Configuration
+## Setup
 
 To setup LoginRateLimit, first download the latest version from HERE.
 
@@ -19,14 +19,13 @@ Then, find your login page or admin panel PHP file and open editing page.
 There, after <?php, add this code:
 
 ```php
-require_once 'LoginRateLimit.php'; // You can change this if you put the PHP file to somewhere else.
+require_once 'LoginRateLimit.php';
 use SafeLogin\Shield;
 
 Shield::protect([
-    'max_attempts' => 5, // You can configure max failed attempts before blocking.
-    'block-time' => 30 // You can configure block duration in seconds.
+    'max_attempts' => 5,
+    'block-time' => 30
 ]);
-// You can also change the storage folder by using storage-folder if you like to.
 ```
 
 After adding that, find the success and fail logic of your login page (usually an if-else statement). If you don't know where is it, search for terms like "Invalid user name or password", "Invalid login", "Login successful" etc.
@@ -44,3 +43,5 @@ Shield::onfail();
 ```
 
 After adding these to your login pages, the script should work correctly.
+
+## Configuration
