@@ -1,10 +1,12 @@
+# Security Notice
+
 LoginRateLimit is licensed under Apache-2.0 license.
 
 Coded By: Emir Alp Koçak
 
 Website: deuteriumsoftware.com
 
-!!! IMPORTANT
+## !!! IMPORTANT
 
 This free software is provided "as-is" without warranty of any kind, express or implied. The developer assumes no liability for data misplacement or system damage resulting from improper deployment or system anomalies this tool can cause.
 
