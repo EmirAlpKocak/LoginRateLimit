@@ -8,4 +8,4 @@ It is designed for beginners, small businesses and solo websites. It works on sh
 
 You don't need programming knowledge to use this script. Just put it in the same directory as your login page and add a few lines of code to your page and it will work.
 
-##Setup and Configuration
+## Setup and Configuration
