@@ -1,10 +1,9 @@
-// LoginRateLimit 1.0.0 CloudFlare Compatible Version
+<?php
+// LoginRateLimit 1.0.0 CloudFlare / Reverse Proxy Compatible Version
 // License: Apache-2.0 license
 // Coded By: Emir Alp Koçak
 // Repository: github.com/EmirAlpKocak/LoginRateLimit
 // Website: deuteriumsoftware.com
-
-<?php
 
 namespace LoginRateLimit;
 
