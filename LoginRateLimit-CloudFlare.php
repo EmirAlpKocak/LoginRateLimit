@@ -163,7 +163,7 @@ private static function getClientIp(): string
         <body style='font-family: sans-serif; text-align: center; padding-top: 50px;'>
             <h1 style='color: #d9534f;'>Access Temporarily Blocked</h1>
             <p>Too many failed login attempts from your IP address. Please try again later.</p>
-            <p>This login page is protected by <a href='https://github.com/EmirAlpKocak/LoginRateLimit' target='_blank' style='color: #337ab7; text-decoration: none;'>LoginRateLimit</a>!</p>
+            <p>This login page is protected by <a href='https://github.com/EmirAlpKocak/LoginRateLimit' target='_blank' style='color: #337ab7; text-decoration: none;'>LoginRateLimit!</a></p>
         </body>
         </html>";
         exit;
