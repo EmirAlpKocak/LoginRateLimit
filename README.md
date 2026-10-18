@@ -21,11 +21,12 @@ There, after <?php, add this code:
 
 ```php
 require_once 'LoginRateLimit.php';
-use SafeLogin\Shield;
+use LoginRateLimit\Shield;
 
 Shield::protect([
     'max_attempts' => 5,
-    'block-time' => 30
+    'block-time' => 30,
+    'window' => 300
 ]);
 ```
 
@@ -47,11 +48,13 @@ After adding these to your login pages, the script should work correctly.
 
 ## Configuration
 
-* You can configure max failed login attempts by changing max_attempts option.
+* You can configure max failed login attempts by changing max-attempts option.
 
 * You can configure block duration in seconds by changing block-time option.
 
-* You can configure location of the directory for storing the temporary files by changing storage-folder option. I recommend you to keep this default if you don't have a reason to change it.
+* You can configure window duration in seconds by changing window option. This will block X number of failed logins in Y seconds.
+
+* You can configure location of the directory for storing the temporary files by changing storage-folder option. By default it will create a folder named as LoginRateLimitTemp to your website automatically. If all LoginRateLimit scripts in your website uses the same temporary storage folder, if an IP address gets blocked it will be blocked from all login pages that uses LoginRateLimit. If you separate folders, only the attacked login page will block that IP address.
 
 * If you uploaded LoginRateLimit.php somewhere else, you need to change the path at require_once. If you uploaded into the same directory as your login pages, do not change it.
 
