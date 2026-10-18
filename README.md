@@ -4,7 +4,7 @@ Simple and user-friendly PHP rate limiter script that blocks password brute forc
 
 It uses IP address based rate limiting to secure your login pages and admin panels. You can configure the max failed login attempt and after the threshold value is exceeded, LoginRateLimit automatically bans that IP address from the login page. You can configure the block duration in seconds.
 
-It is designed for beginners, small businesses and solo websites. It works on sharing hosting and with any panel including cPanel, Plesk Panel and IIS. This will work on any hosting that supports PHP. No SSH or root access is required.
+It is designed for beginners, small businesses and solo websites. It works on shared hosting and with any panel including cPanel, Plesk Panel and IIS. This will work on any hosting that supports PHP. No SSH or root access is required.
 
 You don't need programming knowledge to use this script. Just put it in the same directory as your login page and add a few lines of code to your page and it will work.
 
