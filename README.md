@@ -24,7 +24,7 @@ require_once 'LoginRateLimit.php';
 use LoginRateLimit\Shield;
 
 Shield::protect([
-    'max_attempts' => 5,
+    'max-attempts' => 5,
     'block-time' => 30,
     'window' => 300
 ]);
