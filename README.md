@@ -61,7 +61,7 @@ The HTML page shown when an IP is blocked is stored inside the PHP file, at open
 
 ## For CloudFlare Users
 
-If your website uses CloudFlare or a similar service, you need to download the CloudFlare compatible version because since all IP addresses will come from CloudFlare servers, LoginRateLimit won't work properly and will lock everyone from login page.
+If your website uses CloudFlare or a similar service, you need to download the CloudFlare compatible version because since all IP addresses will come from CloudFlare servers, LoginRateLimit won't work properly and will lock everyone from the login page.
 
 ## License and Security
 
