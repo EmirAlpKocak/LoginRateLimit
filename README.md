@@ -64,7 +64,14 @@ The HTML page shown when an IP is blocked is stored inside the PHP file, at open
 
 ## For CloudFlare Users
 
-If your website uses CloudFlare or a similar reverse proxy service, you need to download the CloudFlare compatible version because since all IP addresses will come from CloudFlare servers, LoginRateLimit won't work properly and will lock everyone from the login page.
+If your website uses CloudFlare or a similar common reverse proxy service, you set reverseProxyEnabled option to true at configuration.
+
+```php
+
+Shield::protect([
+    'reverseProxyEnabled' => true
+]);
+```
 
 ## License and Security
 
@@ -73,6 +80,20 @@ LoginRateLimit and this repository is licensed under **Apache-2.0 license**. See
 Please read **SECURITY.md** file before using LoginRateLimit.
 
 ## Change Log
+
+* 1.1.0 - Released at 30/10/2026:
+
+  * [+] New Features:
+ 
+    * You can now directly set reverseProxyEnabled option to true for reverse proxies such as CloudFlare. There is no longer a separate version for reverse proxies.
+   
+    * Added reverse proxy support for Nginx Proxy and standard load balancers and proxies.
+   
+  * [*] Improvements:
+ 
+    *  Now the user gets 403 error if they attempt to directly access LoginRateLimit.php.
+   
+    *  Changed LoginRateLimitTemp folder permission to 0700. If you have used LoginRateLimit before, you will need to delete the old storage folder.
 
 * 1.0.0 - Released at 18/10/2026:
 
