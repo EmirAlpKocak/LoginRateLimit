@@ -64,7 +64,7 @@ The HTML page shown when an IP is blocked is stored inside the PHP file, at open
 
 ## For CloudFlare and Reverse Proxy Users
 
-If your website uses CloudFlare or a similar common reverse proxy service, you set reverseProxyEnabled option to true at configuration.
+If your website uses CloudFlare or a similar common reverse proxy service, you can set reverseProxyEnabled option to true at configuration.
 
 ```php
 
