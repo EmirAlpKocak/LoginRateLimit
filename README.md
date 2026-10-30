@@ -30,7 +30,7 @@ Shield::protect([
 ]);
 ```
 
-After adding that, find the success and fail logic of your login page (usually an if-else statement). If you don't know where is it, search for terms like "Invalid user name or password", "Invalid login", "Login successful" etc.
+After adding that, find the success and fail logic of your login page (usually an if-else statement). If you don't know where it is, search for terms like "Invalid user name or password", "Invalid login", "Login successful" etc.
 
 Add this code to success:
 
