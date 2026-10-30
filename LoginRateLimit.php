@@ -1,11 +1,17 @@
 <?php
-// LoginRateLimit 1.0.0
+// LoginRateLimit 1.1.0
 // License: Apache-2.0 license
 // Coded By: Emir Alp Koçak
 // Repository: github.com/EmirAlpKocak/LoginRateLimit
 // Website: deuteriumsoftware.com
 
 namespace LoginRateLimit;
+
+if (realpath(__FILE__) === realpath($_SERVER['SCRIPT_FILENAME'] ?? ''))
+{
+    http_response_code(403);
+    exit('Access denied.');
+}
 
 class Shield 
 {
@@ -15,18 +21,20 @@ class Shield
     private static $maxAttempts = 5;
     private static $window = 300;
     private static $blockTime = 100;
+    private static $reverseProxyEnabled = false;
     
     public static function protect(array $settings = [])
     {
         self::$maxAttempts = $settings['max-attempts'] ?? 5;
         self::$blockTime = $settings['block-time'] ?? 100;
         self::$window = $settings['window'] ?? 300;
+        self::$reverseProxyEnabled = $settings['reverse-proxy-enabled'] ?? false;
         
         self::$storageFolder = $settings['storage-folder'] ?? __DIR__ . '/../LoginRateLimitTemp';
        
         if (!is_dir(self::$storageFolder))
         {
-            mkdir(self::$storageFolder, 0755, true);
+            mkdir(self::$storageFolder, 0700, true);
         }
         
                     // following code is for blocking access to the loginratelimit temporary storage folder. You may remove it if you have Option -Indexes or similar.
@@ -115,7 +123,40 @@ public static function onfail()
     
     private static function getClientIp(): string
     {
-        return $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        if (self::$reverseProxyEnabled)
+        {
+            
+        if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) 
+        {
+            $ip = trim($_SERVER['HTTP_CF_CONNECTING_IP']);
+            if (filter_var($ip, FILTER_VALIDATE_IP)) 
+            {
+                return $ip;
+            }
+        }
+
+        if (!empty($_SERVER['HTTP_X_REAL_IP'])) 
+        {
+            $ip = trim($_SERVER['HTTP_X_REAL_IP']);
+            if (filter_var($ip, FILTER_VALIDATE_IP)) 
+            {
+                return $ip;
+            }
+        }
+
+        if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 
+        {
+            $ipList = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+            $ip = trim($ipList[0]);
+            if (filter_var($ip, FILTER_VALIDATE_IP)) 
+            {
+                return $ip;
+            }
+        }
+        
+        }
+        
+        return $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';  
     }
     
     private static function cleanStorage()
