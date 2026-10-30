@@ -44,7 +44,7 @@ Finally, add this code to failure:
 Shield::onfail();
 ```
 
-After adding these to your login pages, the script should work correctly.
+After adding these to your login page, the script should work correctly.
 
 ## Configuration
 
@@ -62,7 +62,7 @@ After adding these to your login pages, the script should work correctly.
 
 The HTML page shown when an IP is blocked is stored inside the PHP file, at openBlockPage() function. You can customize the HTML code for your own warning message. I would be happy if you leave "This login page is protected by LoginRateLimit!" message. :)
 
-## For CloudFlare Users
+## For CloudFlare and Reverse Proxy Users
 
 If your website uses CloudFlare or a similar common reverse proxy service, you set reverseProxyEnabled option to true at configuration.
 
