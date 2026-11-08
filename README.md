@@ -75,7 +75,7 @@ Shield::protect([
 
 ## License and Security
 
-LoginRateLimit and this repository is licensed under **Apache-2.0 license**. See more information at LICENSE file.
+LoginRateLimit and this repository is licensed under **Apache-2.0 license**. See more information at LICENSE.md file.
 
 Please read **SECURITY.md** file before using LoginRateLimit.
 
