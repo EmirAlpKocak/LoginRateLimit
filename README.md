@@ -56,7 +56,7 @@ After adding these to your login page, the script should work correctly.
 
 * You can configure location of the directory for storing the temporary files by changing storage-folder option. By default it will create a folder named as LoginRateLimitTemp to your website automatically. If all LoginRateLimit scripts in your website uses the same temporary storage folder, if an IP address gets blocked it will be blocked from all login pages that uses LoginRateLimit. If you separate folders, only the attacked login page will block that IP address.
 
-* If you uploaded LoginRateLimit.php somewhere else, you need to change the path at require_once. If you uploaded into the same directory as your login pages, do not change it.
+* If you uploaded LoginRateLimit.php to somewhere else, you need to change the path at require_once. If you uploaded into the same directory as your login pages, do not change it.
 
 ## Customizing Blocked Alert HTML Page
 
